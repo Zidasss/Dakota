@@ -68,15 +68,7 @@
 
 
 
-/* Animação de Fade-In */
-.fade-in-animation {
-    animation: fadeIn 1s ease-out forwards; /* Aplica a animação de fade-in, que dura 1 segundo e tem uma transição suave, permanecendo no estado final. */
-}
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); } /* Estado inicial: invisível e deslocado 20 pixels para baixo. */
-    to { opacity: 1; transform: translateY(0); } /* Estado final: visível e na posição original. */
-}
 
 /* Estilo de Fonte e Links */
 #ImagesFont {
@@ -88,11 +80,7 @@
 }
 
 /* Estilo dos Ícones */
-#nav #nav-part2 #icons {
-    padding: 5px; /* Define um espaçamento interno de 5 pixels em todos os lados. */
-    border-radius: 50px; /* Define bordas arredondadas com raio de 50 pixels. */
-    background-color: #ffff; /* Define a cor de fundo como branco. */
-}
+
 
 
 
@@ -547,24 +535,6 @@
 }
 
 
-/* Apply the animation to text elements within the menu on the right */
-/* New dropdown effect */
-.menu-overlay-active .menu-right span,
-.menu-overlay-active .menu-left span {
-    animation: splitTextRise 0.2s ease-out forwards;
-    animation-delay: calc(var(--char-index) * 0.05s);
-}
-
-@keyframes splitTextRise {
-    0% {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
 
 /* Estilos do Frame */
@@ -638,6 +608,34 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Apply the animation to text elements within the menu on the right */
+/* New dropdown effect */
+.menu-overlay-active .menu-right span,
+.menu-overlay-active .menu-left span {
+    animation: splitTextRise 0.2s ease-out forwards;
+    animation-delay: calc(var(--char-index) * 0.05s);
+}
+
+@keyframes splitTextRise {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animação de Fade-In */
+.fade-in-animation {
+    animation: fadeIn 1s ease-out forwards; /* Aplica a animação de fade-in, que dura 1 segundo e tem uma transição suave, permanecendo no estado final. */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); } /* Estado inicial: invisível e deslocado 20 pixels para baixo. */
+    to { opacity: 1; transform: translateY(0); } /* Estado final: visível e na posição original. */
+}
 
 #cursor {
     height: 180px;
@@ -657,5 +655,88 @@
     border-color: #333; /* Altere a cor conforme necessário */
 }
 
+.menu-btn .line {
+    transition: transform 0.5s ease;
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: red;
+    margin: 5px 0;
+    margin-left: -45px;
+    margin-top: 2px;
+    
+  }
+  
+  .menu-btn.active .line-top {
+    transform: translateY(5px) rotate(45deg);
+  }
+  
+  .menu-btn.active .line-bottom {
+    transform: translateY( -1px) rotate(-45deg);
+  }
 
+  .menu-btn {
+    margin-top: 14px;
+    margin-right: 60px; /* Adjust this value as needed to move the button down */
+    
+}
+
+.menu-btn:not(.active):hover .line-top {
+    transform: translateY(1px); /* Adjust this value as needed */
+}
+
+.menu-btn:not(.active):hover .line-bottom {
+    transform: translateY(-1px); /* Adjust this value as needed */
+}
+
+@media (min-width: 500px) and (max-width: 1090px) {
+    .menu-btn .line {
+    transition: transform 0.5s ease;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #000;
+    margin: 5px 0;
+    margin-left: -45px;
+    margin-top: 2px;
+  }
+  
+  .menu-btn.active .line-top {
+    transform: translateY(6px) rotate(45deg);
+  }
+  
+  .menu-btn.active .line-bottom {
+    transform: translateY( -1px) rotate(-45deg);
+  }
+
+  .menu-btn {
+    margin-top: 14px;
+    margin-right: 20px; /* Adjust this value as needed to move the button down */
+}
+}
+
+
+.cart-icon-svg {
+    width: 19px; /* Increase icon size */
+    height: 24px; /* Increase icon size */
+    color: #000; /* Change icon color */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Example of moving the icon */
+  .cart-icon {
+    position: relative;
+    margin-top: -27px;
+    margin-right: 15px;
+}
+  
+  .cart-icon-svg {
+    position: absolute;
+    top: 5px; /* Move icon down */
+    right: 5px; /* Move icon to the right */
+  }
+
+  .cart-icon-svg:hover {
+    transform: rotate(-10deg);
+  }
 

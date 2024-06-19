@@ -659,20 +659,20 @@
     height: 1px;
     margin: 5px 0;
     margin-left: -45px;
-    margin-top: 2px;
+    margin-top: 3px;
     
   }
   
   .menu-btn.active .line-top {
-    transform: translateY(5px) rotate(45deg);
+    transform: translateY(3px) rotate(45deg);
   }
   
   .menu-btn.active .line-bottom {
-    transform: translateY( -1px) rotate(-45deg);
+    transform: translateY( -2px) rotate(-45deg);
   }
 
   .menu-btn {
-    margin-top: 14px;
+    margin-top: 16px;
     margin-right: 60px; /* Adjust this value as needed to move the button down */
     
 }
@@ -759,7 +759,7 @@
   /* Example of moving the icon */
   .cart-icon {
     position: relative;
-    margin-top: -24px;
+    margin-top: -25px;
     margin-right: 25px;
 }
   
@@ -780,7 +780,13 @@
   }
 
 
+  
+  #links a.visible, .link.visible {
+    opacity: 1;
+  }
 
 
-
- 
+  .cart-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+  

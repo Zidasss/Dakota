@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FiShoppingCart } from "react-icons/fi";
+import { FiX as XIcon } from 'react-icons/fi';
 import 'remixicon/fonts/remixicon.css';
 import { motion } from "framer-motion";
 
@@ -7,17 +8,11 @@ function Navbar() {
   const [isBodyOverflow, setIsBodyOverflow] = useState(false); 
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isActive, setIsActive] = useState(false);
- 
   const navLinksRef = useRef(null);
   const navIconsRef = useRef(null);
   
-  
-    
   useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1 
-    };
+    const observerOptions = { threshold: 0.1 };
 
     const observerCallback = (entries, observer) => {
       entries.forEach(entry => {
@@ -31,7 +26,6 @@ function Navbar() {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-
     const elementsToObserve = [navLinksRef.current, navIconsRef.current];
     elementsToObserve.forEach(el => el && observer.observe(el));
 
@@ -41,19 +35,15 @@ function Navbar() {
   }, []);
 
   const handleCartClick = () => {
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-    }
-    setIsCartOpen(!isCartOpen);
-    setIsBodyOverflow(!isCartOpen);
+    if (isMenuOpen) setIsMenuOpen(false);
+    setIsCartOpen(prevState => !prevState);
+    setIsBodyOverflow(prevState => !prevState);
   };
 
   const handleMenuClick = () => {
-    if (isCartOpen) {
-      setIsCartOpen(false);
-    }
-    setIsMenuOpen(!isMenuOpen);
-    setIsBodyOverflow(!isMenuOpen);
+    if (isCartOpen) setIsCartOpen(false);
+    setIsMenuOpen(prevState => !prevState);
+    setIsBodyOverflow(prevState => !prevState);
   };
 
   useEffect(() => {
@@ -64,31 +54,29 @@ function Navbar() {
     };
   }, [isBodyOverflow]);
 
-  const TextSplitter = ({ text }) => {
-    return (
-      <>
-        {text.split('').map((char, index) => (
-          <span key={index} style={{ 
-            display: 'inline-block', 
-            opacity: 0, 
+  const TextSplitter = ({ text }) => (
+    <>
+      {text.split('').map((char, index) => (
+        <span
+          key={index}
+          style={{
+            display: 'inline-block',
+            opacity: 0,
             transform: 'translateY(20px)',
             animation: 'splitTextRise 0.5s ease-out forwards',
-            animationDelay: `${index * 0.05}s`
-          }}>
-            {char}
-          </span>
-        ))}
-      </>
-    );
-  };
-
-  const toggleMenu = () => {
-    setIsActive(prevState => !prevState);
-  };
+            animationDelay: `${index * 0.05}s`,
+            ...(char === ' ' && { width: '0.5em' })
+          }}
+        >
+          {char}
+        </span>
+      ))}
+    </>
+  );
 
   return (
     <>
-      <header className={isActive ? 'active' : ''}>                  
+      <header className={isMenuOpen ? 'active' : ''}>                  
         <div id="nav">
           <div id="nav-part1">
             {/* SVG or Logo can go here */}
@@ -100,15 +88,19 @@ function Navbar() {
               <a id="contact1" className={`link ${isCartOpen ? 'text-white' : 'text-black'}`} href="#">CONTATO</a>
             </div>
             <div id="icons" ref={navIconsRef}>
-            <div className="icon-background">  
-            <div className={`menu-btn cursor-pointer ${isActive ? 'active' : ''}`} onClick={() => { handleMenuClick(); toggleMenu(); }}>
-                    <span className="line line-top" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000' }}></span>
-                    <span className="line line-bottom" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000' }}></span>
+              <div className="icon-background">  
+                <div className={`menu-btn cursor-pointer ${isMenuOpen ? 'active' : ''}`} onClick={handleMenuClick}>
+                  <span className="line line-top" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000' }}></span>
+                  <span className="line line-bottom" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000' }}></span>
                 </div>
                 <div className={`cart-icon cursor-pointer ${isCartOpen ? 'active' : ''}`} onClick={handleCartClick}>
-                <FiShoppingCart className="cart-icon-svg" size={19} color={(isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000'}/>
-                </div>  
-            </div>       
+                  {isCartOpen ? (
+                    <XIcon className="cart-icon-svg" size={19} style={{ transition: 'transform 0.3s ease-in-out' }} color={(isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000'} />
+                  ) : (
+                    <FiShoppingCart className="cart-icon-svg" size={19} color={(isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000'} style={{ transition: 'transform 0.3s ease-in-out' }} />
+                  )}
+                </div>
+              </div>       
             </div>
           </div>
         </div>
@@ -117,14 +109,14 @@ function Navbar() {
         <div className="cart-content">
           {isCartOpen && (
             <>
-              <h2 className="h-11 cursor-pointer">Seu carrinho está vazio. </h2>
+              <h2 className="h-11 cursor-pointer">Seu carrinho está vazio.</h2>
               <button
-                onClick={() => setIsCartOpen(prevState => !prevState)}
+                onClick={() => setIsCartOpen(false)}
                 id="cart-button"
                 className="rounded-full h-20 w-80 mb-20 cursor-pointer button-hover-effect"
-                >
+              >
                 Confira o que há de melhor.
-                </button>
+              </button>
               <div className="motion-container absolute inset-0 flex flex-col items-center justify-end" style={{ height: '87vh', paddingBottom: '1vh' }}>
                 <div className="text border-t-2 border-b-2 border-zinc-300 flex whitespace-nowrap overflow-hidden">
                   {[...Array(3)].map((_, index) => (

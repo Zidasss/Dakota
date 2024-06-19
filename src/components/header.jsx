@@ -4,13 +4,16 @@ import 'remixicon/fonts/remixicon.css';
 import { motion } from "framer-motion";
 
 function Navbar() {
+  const [isBodyOverflow, setIsBodyOverflow] = useState(false); 
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isBodyOverflow, setIsBodyOverflow] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+ 
   const navLinksRef = useRef(null);
   const navIconsRef = useRef(null);
-  const [isActive, setIsActive] = useState(false);
-
+  
+  
+    
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1 
@@ -98,12 +101,12 @@ function Navbar() {
             </div>
             <div id="icons" ref={navIconsRef}>
             <div className="icon-background">  
-                <div className={`menu-btn cursor-pointer ${isActive ? 'active' : ''}`} onClick={() => { handleMenuClick(); toggleMenu(); }}>
-                    <span className={`line line-top ${isCartOpen ? 'text-white' : 'text-black'}`} ></span>
-                    <span className="line line-bottom"></span>
-              </div>
+            <div className={`menu-btn cursor-pointer ${isActive ? 'active' : ''}`} onClick={() => { handleMenuClick(); toggleMenu(); }}>
+                    <span className="line line-top" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000' }}></span>
+                    <span className="line line-bottom" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000' }}></span>
+                </div>
                 <div className={`cart-icon cursor-pointer ${isCartOpen ? 'active' : ''}`} onClick={handleCartClick}>
-                <FiShoppingCart className="cart-icon-svg" size={19}/>
+                <FiShoppingCart className="cart-icon-svg" size={19} color={(isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000'}/>
                 </div>  
             </div>       
             </div>
@@ -118,10 +121,10 @@ function Navbar() {
               <button
                 onClick={() => setIsCartOpen(prevState => !prevState)}
                 id="cart-button"
-                className="rounded-full h-20 w-80 mb-20 cursor-pointer"
-              >
+                className="rounded-full h-20 w-80 mb-20 cursor-pointer button-hover-effect"
+                >
                 Confira o que há de melhor.
-              </button>
+                </button>
               <div className="motion-container absolute inset-0 flex flex-col items-center justify-end" style={{ height: '87vh', paddingBottom: '1vh' }}>
                 <div className="text border-t-2 border-b-2 border-zinc-300 flex whitespace-nowrap overflow-hidden">
                   {[...Array(3)].map((_, index) => (

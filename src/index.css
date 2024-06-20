@@ -269,10 +269,6 @@
     transition: background-color 0.3s ease; /* Define uma transição suave de 0.3 segundos para a cor de fundo. */
 }
 
-.cart-overlay-active button:hover {
-    background-color: white !important; /* Define a cor de fundo como branco ao passar o mouse. */
-    color: black !important; /* Define a cor do texto como preto ao passar o mouse. */
-}
 
 .cart-overlay-active #links #about:hover::after {
     width: 65%; /* Define a largura da linha de destaque como 65% ao passar o mouse. */
@@ -342,10 +338,6 @@
         transition: background-color 0.3s ease; /* Define uma transição suave de 0.3 segundos para a cor de fundo. */
     }
     
-    .cart-overlay-active cart-button:hover::after {
-        background-color: white ; /* Define a cor de fundo como branco ao passar o mouse. */
-        color: black ; /* Define a cor do texto como preto ao passar o mouse. */
-    }
 
     .cart-overlay-active #Cart-Text1 {
         font-size: 65px; /* Define o tamanho da fonte como 14 pixels. */
@@ -643,14 +635,7 @@
     transform: translate(-50%, -50%) scale(0);
 }
 
-.cart-button {
-    transition: border-color 0.3s ease;
-    border: 2px solid transparent;
-}
 
-.cart-button:hover {
-    border-color: #333; /* Altere a cor conforme necessário */
-}
 
 .menu-btn .line {
     transition: transform 0.5s ease;
@@ -710,11 +695,25 @@
   }
 
 
-  .button-hover-effect:hover {
+.cart-button:hover {
     background-color: #FFFFFF !important; /* White background */
     color: #000000 !important; /* Black text */
+    
   }
 
+
+  .cart-button {
+    border-radius: 9999px;
+    height: 5rem; /* 80px */
+    width: 20rem; /* 320px */
+    margin-bottom: 5rem; /* 80px */
+    cursor: pointer;
+    position: relative; /* Adjust if necessary */
+    z-index: 999; /* Bring to the forefront */
+  }
+  
+
+ 
 
   
   #links a.visible, .link.visible {
@@ -784,10 +783,7 @@
     }
 
 
-    .button-hover-effect:hover {
-        background-color: #FFFFFF !important; /* White background */
-        color: #000000 !important; /* Black text */
-    }
+    
 }
 
 

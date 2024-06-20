@@ -113,7 +113,7 @@ function Navbar() {
               <button
                 onClick={() => setIsCartOpen(false)}
                 id="cart-button"
-                className="rounded-full h-20 w-80 mb-20 cursor-pointer button-hover-effect"
+                className="cart-button"
               >
                 Confira o que há de melhor.
               </button>

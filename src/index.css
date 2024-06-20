@@ -685,6 +685,47 @@
     transform: translateY(-1px); /* Adjust this value as needed */
 }
 
+.cart-icon-svg {
+    width: 17px; /* Increase icon size */
+    height: 24px; /* Increase icon size */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Example of moving the icon */
+  .cart-icon {
+    position: relative;
+    margin-top: -25px;
+    margin-right: 25px;
+}
+  
+  .cart-icon-svg {
+    position: absolute;
+    stroke-width: 1.5;
+    top: 5px; /* Move icon down */
+    right: 5px; /* Move icon to the right */
+  }
+
+  .cart-icon-svg:hover {
+    transform: rotate(-10deg);
+  }
+
+
+  .button-hover-effect:hover {
+    background-color: #FFFFFF !important; /* White background */
+    color: #000000 !important; /* Black text */
+  }
+
+
+  
+  #links a.visible, .link.visible {
+    opacity: 1;
+  }
+
+
+  .cart-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+
 @media (min-width: 500px) and (max-width: 1090px) {
     .menu-btn .line {
         transition: transform 0.5s ease;
@@ -750,43 +791,6 @@
 }
 
 
-.cart-icon-svg {
-    width: 17px; /* Increase icon size */
-    height: 24px; /* Increase icon size */
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  /* Example of moving the icon */
-  .cart-icon {
-    position: relative;
-    margin-top: -25px;
-    margin-right: 25px;
-}
-  
-  .cart-icon-svg {
-    position: absolute;
-    top: 5px; /* Move icon down */
-    right: 5px; /* Move icon to the right */
-  }
-
-  .cart-icon-svg:hover {
-    transform: rotate(-10deg);
-  }
-
-
-  .button-hover-effect:hover {
-    background-color: #FFFFFF !important; /* White background */
-    color: #000000 !important; /* Black text */
-  }
-
 
   
-  #links a.visible, .link.visible {
-    opacity: 1;
-  }
-
-
-  .cart-icon {
-    transition: transform 0.3s ease-in-out;
-  }
-  
+/* Define the neon glow effect */

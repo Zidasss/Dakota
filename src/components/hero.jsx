@@ -1,79 +1,78 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import heroImage1 from '../assets/Home.jpeg';
 import heroImage2 from '../assets/Home2.jpeg';
 import heroImage3 from '../assets/Home3.jpeg';
 
 function Hero() {
-  const [state, setState] = useState({
-    currentImage: 1,
-    prevMouseX: null,
-    switchingSpeed: 600,
-    isExpanded: true,
-    isMouseOver: false,
-    hasMouseOverHappened: false,
-    isMenuVisible: false,
-    intervalId: null,
-    mouseMoveCounter: 0,
-    hasMouseEntered: false,
-    isShrinking: false,
-    isAnimationComplete: false,
-  });
+  const [currentImage, setCurrentImage] = useState(1);
+  const [isExpanded, setIsExpanded] = useState(true);
+  const [isMouseOver, setIsMouseOver] = useState(false);
+  const [hasMouseOverHappened, setHasMouseOverHappened] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [isShrinking, setIsShrinking] = useState(false);
+  const [switchingSpeed, setSwitchingSpeed] = useState(600);
+  const mouseMoveCounterRef = useRef(0);
+  const intervalIdRef = useRef(null);
+  const prevMouseXRef = useRef(null);
+
+  const switchImage = useCallback(() => {
+    setCurrentImage((prevImage) => (prevImage === 3 ? 1 : prevImage + 1));
+  }, []);
 
   useEffect(() => {
-    const { switchingSpeed, isShrinking, hasMouseEntered } = state;
+    // Start the image switching interval immediately
+    const intervalId = setInterval(switchImage, switchingSpeed);
+    intervalIdRef.current = intervalId;
 
-    const id = setInterval(() => {
-      setState(prevState => ({
-        ...prevState,
-        currentImage: prevState.currentImage === 3 ? 1 : prevState.currentImage + 1,
-      }));
-    }, isShrinking ? 700 : switchingSpeed); // Alteração da velocidade quando a imagem está diminuindo
+    return () => clearInterval(intervalId);
+  }, [switchingSpeed, switchImage]);
 
-    setState(prevState => ({ ...prevState, intervalId: id }));
-
-    return () => {
-      clearInterval(id);
-    };
-  }, [state.switchingSpeed, state.isShrinking, state.hasMouseEntered]);
-
-  const handleMouseMove = e => {
-    const { isShrinking, intervalId, prevMouseX, mouseMoveCounter } = state;
-    setState(prevState => ({ ...prevState, mouseMoveCounter: prevState.mouseMoveCounter + 1 }));
-
-    if (!isShrinking && intervalId) {
-      clearInterval(intervalId);
-      setState(prevState => ({ ...prevState, intervalId: null }));
+  useEffect(() => {
+    if (isMouseOver || hasMouseOverHappened || isExpanded) {
+      clearInterval(intervalIdRef.current);
+    } else {
+      const intervalId = setInterval(switchImage, switchingSpeed);
+      intervalIdRef.current = intervalId;
+      return () => clearInterval(intervalId);
     }
+  }, [isMouseOver, hasMouseOverHappened, isExpanded, switchingSpeed, switchImage]);
 
-    if (mouseMoveCounter >= 15) {
-      if (prevMouseX && e.clientX !== prevMouseX) {
-        setState(prevState => ({
-          ...prevState,
-          currentImage: prevState.currentImage === 3 ? 1 : prevState.currentImage + 1,
-        }));
+  const handleMouseMove = useCallback((e) => {
+    mouseMoveCounterRef.current += 1;
+    if (mouseMoveCounterRef.current >= 15) {
+      if (prevMouseXRef.current !== null && e.clientX !== prevMouseXRef.current) {
+        switchImage();
       }
-
-      setState(prevState => ({
-        ...prevState,
-        prevMouseX: e.clientX,
-        isMouseOver: true,
-        hasMouseOverHappened: true,
-        mouseMoveCounter: 0,
-      }));
+      prevMouseXRef.current = e.clientX;
+      setIsMouseOver(true);
+      setHasMouseOverHappened(true);
+      mouseMoveCounterRef.current = 0;
     }
-  };
+  }, [switchImage]);
+
+  useEffect(() => {
+    const handleResize = () => setIsExpanded(window.innerWidth <= 640);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsExpanded(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    setIsMenuVisible(!isExpanded);
+  }, [isExpanded]);
 
   const handleMouseEnter = () => {
-    const { isShrinking, intervalId } = state;
-    setState(prevState => ({ ...prevState, hasMouseEntered: true }));
-
-    if (!isShrinking && intervalId) {
-      clearInterval(intervalId);
-      setState(prevState => ({ ...prevState, intervalId: null }));
+    setHasMouseOverHappened(true);
+    if (intervalIdRef.current) {
+      clearInterval(intervalIdRef.current);
     }
   };
 
-  const getImageSource = imageNumber => {
+  const getImageSource = (imageNumber) => {
     switch (imageNumber) {
       case 1:
         return heroImage1;
@@ -86,63 +85,16 @@ function Hero() {
     }
   };
 
-  useEffect(() => {
-    const { isMouseOver, hasMouseOverHappened, isExpanded, switchingSpeed } = state;
-    const switchImage = () => {
-      if (!isExpanded) {
-        setState(prevState => ({
-          ...prevState,
-          currentImage: prevState.currentImage === 3 ? 1 : prevState.currentImage + 1,
-        }));
-      }
-    };
-
-    switchImage();
-
-    const timer = setInterval(switchImage, switchingSpeed);
-
-    if (isMouseOver || hasMouseOverHappened || isExpanded) {
-      clearInterval(timer);
-    }
-
-    return () => clearInterval(timer);
-  }, [state.isMouseOver, state.hasMouseOverHappened, state.switchingSpeed, state.isExpanded]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setState(prevState => ({ ...prevState, isExpanded: false }));
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setState(prevState => ({
-        ...prevState,
-        isExpanded: window.innerWidth <= 640,
-      }));
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    setState(prevState => ({ ...prevState, isMenuVisible: !prevState.isExpanded }));
-  }, [state.isExpanded]);
-
   return (
     <div onMouseMove={handleMouseMove} onMouseEnter={handleMouseEnter}>
       <div
         id="frame"
         className={`bg-gray-500 overflow-hidden flex justify-center items-center m-4 mb-8 h-screen rounded-md cursor-pointer ${
-          state.isExpanded ? 'expanded' : ''
+          isExpanded ? 'expanded' : ''
         }`}
-        onMouseLeave={() => setState(prevState => ({ ...prevState, isMouseOver: false }))}
+        onMouseLeave={() => setIsMouseOver(false)}
       >
-        <img src={getImageSource(state.currentImage)} alt="Imagem" />
+        <img src={getImageSource(currentImage)} alt="Imagem" />
       </div>
     </div>
   );

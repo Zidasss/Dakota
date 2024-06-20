@@ -19,7 +19,7 @@ function Navbar() {
         if (entry.isIntersecting) {
           setTimeout(() => {
             entry.target.classList.add('fade-in');
-          }, 4000);
+          }, 2500);
           observer.unobserve(entry.target);
         }
       });

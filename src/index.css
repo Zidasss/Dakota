@@ -10,6 +10,7 @@
 
 body {
     background-color: #F7F7F7;
+    overflow-y: scroll;
 }
 
 /* Estilos do Navbar */
@@ -84,10 +85,25 @@ body {
     text-decoration: none; /* Remove a decoração do texto (sublinhado). */
 }
 
+
+#ImagesFontProduct1 {
+    font-family: 'Gilroy-Medium', sans-serif; /* Define a fonte personalizada 'Gilroy-Medium'. */
+    font-weight: 400; /* Define o peso da fonte como 400 (normal). */
+    font-size: 12px; /* Define o tamanho da fonte como 12 pixels. */
+    text-transform: uppercase; /* Transforma o texto para letras maiúsculas. */
+    text-decoration: none; /* Remove a decoração do texto (sublinhado). */
+}
+
+#ImagesFontProduct2 {
+    font-family: 'Gilroy-Medium', sans-serif; /* Define a fonte personalizada 'Gilroy-Medium'. */
+    font-weight: 400; /* Define o peso da fonte como 400 (normal). */
+    font-size: 12px; /* Define o tamanho da fonte como 12 pixels. */
+    text-transform: uppercase; /* Transforma o texto para letras maiúsculas. */
+    text-decoration: none; /* Remove a decoração do texto (sublinhado). */
+}
+
+
 /* Estilo dos Ícones */
-
-
-
 
 #nav #nav-part2 #icons i {
     font-size: 17px; /* Define o tamanho da fonte como 17 pixels. */
@@ -369,7 +385,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 4; /* Acima dos outros conteúdos */
+    z-index: 5; /* Acima dos outros conteúdos */
 }
 
 
@@ -574,25 +590,25 @@ body {
 }
 
 /* Estilização da Scrollbar */
+/* Adjust scrollbar styles */
 ::-webkit-scrollbar {
-    width: 11px; /* Define a largura da barra de rolagem como 11 pixels. */
+    width: 11px; /* Width of the scrollbar */
+    background: #f7f7f7; /* Background color of the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 0, 0); /* Define a cor do polegar da barra de rolagem como cinza escuro. */
-    border-radius: 10px; /* Define bordas arredondadas com raio de 10 pixels. */
-    border: 3px solid transparent; /* Define uma borda transparente de 3 pixels ao redor do polegar. */
-    background-clip: content-box; /* Define que o fundo do polegar deve ser recortado pelo conteúdo da caixa. */
+    background-color: rgba(0, 0, 0, 0.2); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
 }
 
 ::-webkit-scrollbar-track {
-    background: #f7f7f7; /* Define a cor de fundo da trilha da barra de rolagem como branco. */
-    border-radius: 10px; /* Define bordas arredondadas com raio de 10 pixels. */
+    background: #f7f7f7; /* Color of the track (behind the thumb) */
+    border-radius: 10px; /* Rounded corners for the track */
 }
 
-/* Animação de Fade-In (Alternativa) */
+/* Animação de Fade-In utilizada no <links> do HEADER */
 .fade-in {
-    animation: fadeIn ease 0.5s; /* Aplica a animação de fade-in, que dura 1 segundo e tem uma transição suave. */
+    animation: fadeIn ease 1s; /* Aplica a animação de fade-in, que dura 1 segundo e tem uma transição suave. */
     animation-fill-mode: forwards; /* Mantém o estado final da animação após sua conclusão. */
     opacity: 0; /* Define a opacidade como 0, tornando o elemento invisível inicialmente. */
 }
@@ -603,10 +619,10 @@ body {
 }
 
 /* Apply the animation to text elements within the menu on the right */
-/* New dropdown effect */
+
 .menu-overlay-active .menu-right span,
 .menu-overlay-active .menu-left span {
-    animation: splitTextRise 0.2s ease-out forwards;
+    animation: splitTextRise 1s ease-out forwards;
     animation-delay: calc(var(--char-index) * 0.05s);
 }
 
@@ -621,15 +637,6 @@ body {
     }
   }
 
-  /* Animação de Fade-In */
-.fade-in-animation {
-    animation: fadeIn 1s ease-out forwards; /* Aplica a animação de fade-in, que dura 1 segundo e tem uma transição suave, permanecendo no estado final. */
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); } /* Estado inicial: invisível e deslocado 20 pixels para baixo. */
-    to { opacity: 1; transform: translateY(0); } /* Estado final: visível e na posição original. */
-}
 
 #cursor {
     height: 180px;
@@ -794,4 +801,13 @@ body {
 
 
   
-/* Define the neon glow effect */
+#ProductGrid {
+    margin-top: -180px !important;
+}
+
+
+
+
+
+
+

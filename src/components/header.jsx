@@ -123,16 +123,22 @@ function Navbar() {
         </div>
       </header>
 
+
+
+
+
       {/* Overlay do carrinho e menu */}
+
+      
       <div className={`cart-overlay ${isCartOpen ? 'cart-overlay-active' : ''}`} onClick={(e) => handleOverlayClick(e, 'cart')}>
         <div className="cart-content" onClick={(e) => e.stopPropagation()}>
           {isCartOpen && (
             <>
-              <h2 className="h-11 cursor-pointer">Seu carrinho está vazio.</h2>
+              <h2 className="h-11 cursor-pointer fade-in">Seu carrinho está vazio.</h2>
               <button
                 onClick={() => setIsCartOpen(false)}
                 id="cart-button"
-                className="cart-button"
+                className={`cart-button ${isCartOpen ? 'fade-in' : ''}`}
               >
                 Confira o que há de melhor.
               </button>

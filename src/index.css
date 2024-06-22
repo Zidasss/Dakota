@@ -808,6 +808,136 @@ body {
 
 
 
+#item-name {
+    margin-top: 300px;
+    margin-right: 700px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    color: #000000;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
+#item-photo {
+    margin-left: 250px;
+}
+
+#item-description {
+    margin-left: -1155px;
+    margin-top: 300px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+    margin-top: 380px;
+    margin-right: 1150px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+}
+
+.cart-button,
+.add-to-cart-button {
+    background-color: #000;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 11.5px ;
+    cursor: pointer;
+}
+
+.quantity-button:hover,
+.add-to-cart-button:hover {
+    background-color: #333;
+}
+
+.quantity,
+.price {
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+#banner1 {
+    margin-top: 80px;
+}
+
+
+@media (min-width: 500px) and (max-width: 1000px) {
+    #item-name {
+        margin-top: 650px;
+        margin-left: 90px;
+        white-space: nowrap;
+        font-family: 'Gilroy-Medium', sans-serif;
+        color: #000000;
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    #item-photo {
+        margin-left: 5px;
+    }
+
+    #item-description {
+        margin-left: 5px;
+        margin-top: 1150px;
+        text-align: center;
+    }
+    
+    .button-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 350px;
+        margin-top: 750px;
+        margin-right: 50px;
+        padding: 10px 20px;
+        background-color: #000;
+        color: #fff;
+        border-radius: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .cart-button,
+    .add-to-cart {
+        background-color: #000;
+        color: #000000;
+        border: none;
+        padding: 10px 20px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+    
+    .quantity-button:hover,
+    .add-to-cart-button:hover {
+        background-color: #333;
+    }
+    
+    .quantity,
+    .price {
+        font-size: 14px;
+        margin: 0 20px !important;
+    }
+    
+    #banner1 {
+        margin-top: 350px;
+    }
+
+   
+}
 
 

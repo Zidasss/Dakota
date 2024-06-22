@@ -1,20 +1,47 @@
 import React from 'react';
-import heroImage1 from '../assets/Model1.jpg'; // Update the path if necessary
-import heroImage2 from '../assets/model2.jpg'; // Add the path of the second image
+import Product1 from '../assets/cachecol.jpg'; // Update the path if necessary
+import Product2 from '../assets/cachecol4.jpg';
+import Product3 from '../assets/cachecol2.jpg';
+import Product4 from '../assets/cachecol3.jpg';
+import Product5 from '../assets/cachecol5.jpg';
 
-function ImageGrid() {
+
+const FullScreenHeading = () => {
   return (
-    <div id="ImagesFont" className="flex justify-center items-center m-4 gap-4">
-      <div  className="bg-gray-500 overflow-hidden flex justify-center items-center w-full h-[100vh] rounded-md cursor-pointer relative">
-        <img src={heroImage1} alt="Imagem 1" className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110" />
-        <p className="absolute top-0 left-0 m-2 text-sm text-white">SOBRE NÓS</p> {/* Add this line */}
+    <div>
+      
+
+      <div className="flex justify-center items-center m-4 gap-4">
+        
+        <div className="bg-gray-500 overflow-hidden flex justify-center items-center w-150 mt-20 h-[75vh] md:h-[100vh] rounded-md cursor-pointer relative">
+          <img src={Product1} alt="Product 1" className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110" />
+        </div>
       </div>
-      <div className="bg-gray-500 overflow-hidden flex justify-center items-center w-full h-[100vh] rounded-md cursor-pointer relative"> {/* Add relative here */}
-        <img src={heroImage2} alt="Imagem 2" className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110" />
-        <p className="absolute top-0 left-0 m-2 text-sm text-white">SHOP</p> {/* Add this line */}     
+
+      <div className="flex justify-center items-center m-4 gap-4">
+        <div className="bg-gray-500 overflow-hidden flex justify-center items-center w-full h-[75vh] md:h-[100vh] rounded-md cursor-pointer relative">
+          <img src={Product2} alt="Product 1" className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110" />
+          
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center m-4 gap-4">
+        <div className="bg-gray-500 overflow-hidden flex justify-center items-center w-full h-[75vh] md:h-[100vh] rounded-md cursor-pointer relative">
+          <img src={Product3} alt="Product 2" className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110" />
+        </div>
+          <div className="bg-gray-500 overflow-hidden flex justify-center items-center w-full h-[75vh] md:h-[100vh] rounded-md cursor-pointer relative">
+            <img src={Product4} alt="Product 3" className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110" />
+          </div>  
+      </div>
+
+      <div id="teste" className="flex justify-center items-center h-20 m-4 gap-4 ">
+        <div className="bg-gray-500 overflow-hidden flex justify-center items-center w-full h-[75vh] md:h-[100vh] rounded-md cursor-pointer relative">
+          <img src={Product5} alt="Product 1" className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110" />
+          
+        </div>
       </div>
     </div>
   );
-}
+};
 
-export default ImageGrid;
+export default FullScreenHeading;

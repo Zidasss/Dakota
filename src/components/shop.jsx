@@ -10,7 +10,7 @@ const FullScreenHeading = () => {
       <div className="relative  bg-gray-100 flex flex-col md:flex-row items-center justify-between px-10 mt-4 mb-20">
         <div className="flex flex-col items-start md:items-start">
           <div className="fade-in">
-            <h1 className="text-8xl md:text-9xl lg:text-[12rem] font-bold leading-none mb-4 md:mb-20 cursor-pointer">
+            <h1 className="text-8xl md:text-9xl lg:text-[12rem] font-bold leading-none mb-4 md:mb-20 cursor-pointer mt-20">
               GOOD <br />
               <span className="inline-flex items-center">
                 THINGS
@@ -56,6 +56,7 @@ const FullScreenHeading = () => {
           <p className="absolute top-0 left-0 m-2 text-sm text-white">RED SHIRT</p>
           <p className="absolute bottom-0 left-0 m-2 text-sm text-white">R$ 199, 90</p>
         </div>
+        
         <div className="bg-gray-500 overflow-hidden flex justify-center items-center w-full h-[75vh] md:h-[100vh] rounded-md cursor-pointer relative">
           <img src={Product3} alt="Imagem 2" className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110" />
           <p className="absolute top-0 left-0 m-2 text-sm text-white">HIGH SCHOOL JACKET</p>
@@ -68,6 +69,7 @@ const FullScreenHeading = () => {
           <img src={Product4} alt="Imagem 2" className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110" />
           <p className="absolute top-0 left-0 m-2 text-sm text-white">ECOBAG</p>
           <p className="absolute bottom-0 right-0 m-2 text-sm text-white">R$ 30</p>
+          
         </div>
       </div>
     </div>

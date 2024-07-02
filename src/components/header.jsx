@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 // Componente Navbar
 function Navbar() {
-  const [isBodyOverflow, setIsBodyOverflow] = useState(false); 
+  const [isBodyOverflow, setIsBodyOverflow] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinksRef = useRef(null);
@@ -105,23 +105,24 @@ function Navbar() {
               <a id="contact1" className={`link ${isCartOpen ? 'text-white' : 'text-black'}`} href="#">CONTATO</a>
             </div>
             <div id="icons" ref={navIconsRef}>
-              <div className="icon-background">
+              <div className="icon-background" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#FFF' : '#000' }}>
                 <div className={`menu-btn cursor-pointer ${isMenuOpen ? 'active' : ''}`} onClick={handleMenuClick}>
-                  <span className="line line-top" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000' }}></span>
-                  <span className="line line-bottom" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000' }}></span>
+                  <span className="line line-top" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#000' : '#FFF', display: (isMenuOpen ? 'none' : 'block') }}></span>
+                  <span className="line line-top" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#000' : '#FFF' }}></span>
+                  <span className="line line-bottom" style={{ backgroundColor: (isCartOpen || isMenuOpen) ? '#000' : '#FFF' }}></span>
                 </div>
                 <div className={`cart-icon cursor-pointer ${isCartOpen ? 'active' : ''}`} onClick={handleCartClick}>
                   {isCartOpen ? (
-                    <XIcon className="cart-icon-svg" size={19} style={{ transition: 'transform 0.3s ease-in-out' }} color={(isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000'} />
+                    <XIcon className="cart-icon-svg" size={19} style={{ transition: 'transform 0.3s ease-in-out' }} color='#000' />
                   ) : (
-                    <FiShoppingCart className="cart-icon-svg" size={19} color={(isCartOpen || isMenuOpen) ? '#FFFFFF' : '#000000'} style={{ transition: 'transform 0.3s ease-in-out' }} />
+                    <FiShoppingCart className="cart-icon-svg" size={19} color={(isCartOpen || isMenuOpen) ? '#000' : '#FFF'} style={{ transition: 'transform 0.3s ease-in-out' }} />
                   )}
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </header>
+      </header >
 
 
 
@@ -129,8 +130,8 @@ function Navbar() {
 
       {/* Overlay do carrinho e menu */}
 
-      
-      <div className={`cart-overlay ${isCartOpen ? 'cart-overlay-active' : ''}`} onClick={(e) => handleOverlayClick(e, 'cart')}>
+      < div className={`cart-overlay ${isCartOpen ? 'cart-overlay-active' : ''}`
+      } onClick={(e) => handleOverlayClick(e, 'cart')}>
         <div className="cart-content" onClick={(e) => e.stopPropagation()}>
           {isCartOpen && (
             <>
@@ -175,7 +176,7 @@ function Navbar() {
             </>
           )}
         </div>
-      </div>
+      </div >
       <div className={`menu-overlay ${isMenuOpen ? 'menu-overlay-active' : ''}`} onClick={(e) => handleOverlayClick(e, 'menu')}>
         <div className="menu-content" onClick={(e) => e.stopPropagation()}>
           {isMenuOpen && (
@@ -213,3 +214,7 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+
+

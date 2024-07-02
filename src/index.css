@@ -15,60 +15,91 @@ body {
 
 /* Estilos do Navbar */
 #nav {
-    width: 100%; /* Define a largura do navbar para ocupar 100% da largura do contêiner pai. */
-    display: flex; /* Usa flexbox para layout. Flexbox é um modelo de layout unidimensional que facilita a distribuição de espaço entre itens e o alinhamento deles em um contêiner. */
-    align-items: flex-start; /* Alinha os itens do navbar ao início do eixo transversal (vertical). */
-    justify-content: space-between; /* Distribui os itens com espaço igual entre eles no eixo principal (horizontal). */
-    padding: 1px; /* Define um espaçamento interno de 1 pixel em todos os lados. */
-    position: -webkit-sticky; /* Define a posição do navbar como sticky para navegadores WebKit, como o Safari. */
-    top: 0; /* Faz com que o navbar fique preso ao topo da página quando se rola. */
-    background-color: #F7F7F7; /* Define a cor de fundo do navbar como branco. */
-    z-index: 1; /* Define a ordem de empilhamento para garantir que o navbar esteja acima de outros elementos. */
+    width: 100%;
+    /* Define a largura do navbar para ocupar 100% da largura do contêiner pai. */
+    display: flex;
+    /* Usa flexbox para layout. Flexbox é um modelo de layout unidimensional que facilita a distribuição de espaço entre itens e o alinhamento deles em um contêiner. */
+    align-items: flex-start;
+    /* Alinha os itens do navbar ao início do eixo transversal (vertical). */
+    justify-content: space-between;
+    /* Distribui os itens com espaço igual entre eles no eixo principal (horizontal). */
+    padding: 1px;
+    /* Define um espaçamento interno de 1 pixel em todos os lados. */
+    position: -webkit-sticky;
+    /* Define a posição do navbar como sticky para navegadores WebKit, como o Safari. */
+    top: 0;
+    /* Faz com que o navbar fique preso ao topo da página quando se rola. */
+    background-color: #F7F7F7;
+    /* Define a cor de fundo do navbar como branco. */
+    z-index: 1;
+    /* Define a ordem de empilhamento para garantir que o navbar esteja acima de outros elementos. */
 }
 
 #nav #nav-part1 {
-    height: 24px; /* Define a altura do primeiro segmento do navbar. */
-    overflow: hidden; /* Esconde qualquer conteúdo que transborde do contêiner. */
-    position: relative; /* Define a posição relativa para permitir posicionamento absoluto dos filhos em relação a este contêiner. */
+    height: 24px;
+    /* Define a altura do primeiro segmento do navbar. */
+    overflow: hidden;
+    /* Esconde qualquer conteúdo que transborde do contêiner. */
+    position: relative;
+    /* Define a posição relativa para permitir posicionamento absoluto dos filhos em relação a este contêiner. */
 }
 
 #nav #nav-part1 svg {
-    display: block; /* Exibe o SVG como um bloco, ocupando toda a largura disponível. */
+    display: block;
+    /* Exibe o SVG como um bloco, ocupando toda a largura disponível. */
 }
 
 #nav #nav-part1 #logo2 {
-    position: absolute; /* Posiciona o elemento de forma absoluta em relação ao seu contêiner pai. */
-    top: 64px; /* Define a distância de 64 pixels do topo do contêiner pai. */
-    opacity: 0; /* Define a opacidade como 0, tornando o elemento invisível inicialmente. */
+    position: absolute;
+    /* Posiciona o elemento de forma absoluta em relação ao seu contêiner pai. */
+    top: 64px;
+    /* Define a distância de 64 pixels do topo do contêiner pai. */
+    opacity: 0;
+    /* Define a opacidade como 0, tornando o elemento invisível inicialmente. */
 }
 
 #nav #nav-part2 {
-    display: flex; /* Usa flexbox para layout. */
-    align-items: center; /* Alinha os itens ao centro do eixo transversal (vertical). */
-    justify-content: flex-start; /* Alinha os itens ao início do eixo principal (horizontal). */
-    gap: 2vw; /* Define um espaçamento de 2% da largura da viewport entre os itens. */
+    display: flex;
+    /* Usa flexbox para layout. */
+    align-items: center;
+    /* Alinha os itens ao centro do eixo transversal (vertical). */
+    justify-content: flex-start;
+    /* Alinha os itens ao início do eixo principal (horizontal). */
+    gap: 2vw;
+    /* Define um espaçamento de 2% da largura da viewport entre os itens. */
     margin-bottom: -10px;
 }
 
 #nav #nav-part2 #links {
-    padding: 10px; /* Define um espaçamento interno de 10 pixels em todos os lados. */
-    margin-right: 130px; /* Define uma margem direita de 160 pixels. */
-    margin-top: 4px; /* Define uma margem superior de 3 pixels. */
-    
+    padding: 10px;
+    /* Define um espaçamento interno de 10 pixels em todos os lados. */
+    margin-right: 130px;
+    /* Define uma margem direita de 160 pixels. */
+    margin-top: 4px;
+    /* Define uma margem superior de 3 pixels. */
+
 }
 
 
 
 #nav #nav-part2 #links a {
-    font-family: 'Gilroy-Medium', sans-serif; /* Define a fonte personalizada 'Gilroy-Medium'. */
-    text-transform: uppercase; /* Transforma o texto para letras maiúsculas. */
-    text-decoration: none; /* Remove a decoração do texto (sublinhado). */
-    font-weight: 400; /* Define o peso da fonte como 400 (normal). */
-    font-size: 12px; /* Define o tamanho da fonte como 12 pixels. */
-    margin: 0 1vw; /* Define uma margem horizontal de 1% da largura da viewport. */
-    padding-right: 1vw; /* Define um padding à direita de 2% da largura da viewport. */
-    transition: opacity 1s ease-out; /* Define uma transição suave de 1 segundo para a opacidade. */
-  
+    font-family: 'Gilroy-Medium', sans-serif;
+    /* Define a fonte personalizada 'Gilroy-Medium'. */
+    text-transform: uppercase;
+    /* Transforma o texto para letras maiúsculas. */
+    text-decoration: none;
+    /* Remove a decoração do texto (sublinhado). */
+    font-weight: 400;
+    /* Define o peso da fonte como 400 (normal). */
+    font-size: 12px;
+    /* Define o tamanho da fonte como 12 pixels. */
+    margin: 0 1vw;
+    /* Define uma margem horizontal de 1% da largura da viewport. */
+    padding-right: 1vw;
+    /* Define um padding à direita de 2% da largura da viewport. */
+    transition: opacity 1s ease-out;
+    /* Define uma transição suave de 1 segundo para a opacidade. */
+
 }
 
 
@@ -78,159 +109,235 @@ body {
 
 /* Estilo de Fonte e Links */
 #ImagesFont {
-    font-family: 'Gilroy-Medium', sans-serif; /* Define a fonte personalizada 'Gilroy-Medium'. */
-    font-weight: 400; /* Define o peso da fonte como 400 (normal). */
-    font-size: 12px; /* Define o tamanho da fonte como 12 pixels. */
-    text-transform: uppercase; /* Transforma o texto para letras maiúsculas. */
-    text-decoration: none; /* Remove a decoração do texto (sublinhado). */
+    font-family: 'Gilroy-Medium', sans-serif;
+    /* Define a fonte personalizada 'Gilroy-Medium'. */
+    font-weight: 400;
+    /* Define o peso da fonte como 400 (normal). */
+    font-size: 12px;
+    /* Define o tamanho da fonte como 12 pixels. */
+    text-transform: uppercase;
+    /* Transforma o texto para letras maiúsculas. */
+    text-decoration: none;
+    /* Remove a decoração do texto (sublinhado). */
 }
 
 
 #ImagesFontProduct1 {
-    font-family: 'Gilroy-Medium', sans-serif; /* Define a fonte personalizada 'Gilroy-Medium'. */
-    font-weight: 400; /* Define o peso da fonte como 400 (normal). */
-    font-size: 12px; /* Define o tamanho da fonte como 12 pixels. */
-    text-transform: uppercase; /* Transforma o texto para letras maiúsculas. */
-    text-decoration: none; /* Remove a decoração do texto (sublinhado). */
+    font-family: 'Gilroy-Medium', sans-serif;
+    /* Define a fonte personalizada 'Gilroy-Medium'. */
+    font-weight: 400;
+    /* Define o peso da fonte como 400 (normal). */
+    font-size: 12px;
+    /* Define o tamanho da fonte como 12 pixels. */
+    text-transform: uppercase;
+    /* Transforma o texto para letras maiúsculas. */
+    text-decoration: none;
+    /* Remove a decoração do texto (sublinhado). */
 }
 
 #ImagesFontProduct2 {
-    font-family: 'Gilroy-Medium', sans-serif; /* Define a fonte personalizada 'Gilroy-Medium'. */
-    font-weight: 400; /* Define o peso da fonte como 400 (normal). */
-    font-size: 12px; /* Define o tamanho da fonte como 12 pixels. */
-    text-transform: uppercase; /* Transforma o texto para letras maiúsculas. */
-    text-decoration: none; /* Remove a decoração do texto (sublinhado). */
+    font-family: 'Gilroy-Medium', sans-serif;
+    /* Define a fonte personalizada 'Gilroy-Medium'. */
+    font-weight: 400;
+    /* Define o peso da fonte como 400 (normal). */
+    font-size: 12px;
+    /* Define o tamanho da fonte como 12 pixels. */
+    text-transform: uppercase;
+    /* Transforma o texto para letras maiúsculas. */
+    text-decoration: none;
+    /* Remove a decoração do texto (sublinhado). */
 }
 
 
 /* Estilo dos Ícones */
 
 #nav #nav-part2 #icons i {
-    font-size: 17px; /* Define o tamanho da fonte como 17 pixels. */
-    margin: 0 1vw; /* Define uma margem horizontal de 2% da largura da viewport. */
-    font-weight: 100; /* Define o peso da fonte como 100 (leve). */
+    font-size: 17px;
+    /* Define o tamanho da fonte como 17 pixels. */
+    margin: 0 1vw;
+    /* Define uma margem horizontal de 2% da largura da viewport. */
+    font-weight: 100;
+    /* Define o peso da fonte como 100 (leve). */
 }
 
 
 /* Efeitos de hover nos links */
 #links #about1:hover::after {
-    width: 65%; /* Define a largura da linha de destaque como 65% ao passar o mouse. */
+    width: 65%;
+    /* Define a largura da linha de destaque como 65% ao passar o mouse. */
 }
 
 #links #shop1:hover::after {
-    width: 50%; /* Define a largura da linha de destaque como 50% ao passar o mouse. */
+    width: 50%;
+    /* Define a largura da linha de destaque como 50% ao passar o mouse. */
 }
 
 #links #contact1:hover::after {
-    width: 60%; /* Define a largura da linha de destaque como 60% ao passar o mouse. */
+    width: 60%;
+    /* Define a largura da linha de destaque como 60% ao passar o mouse. */
 }
 
-#links, #icons {
-    opacity: 0; /* Define a opacidade como 0, tornando-os invisíveis inicialmente. */
-    transition: opacity 1s ease; /* Define uma transição suave de 1 segundo para a opacidade. */
+#links,
+#icons {
+    opacity: 0;
+    /* Define a opacidade como 0, tornando-os invisíveis inicialmente. */
+    transition: opacity 1s ease;
+    /* Define uma transição suave de 1 segundo para a opacidade. */
 }
 
 #icons {
-    position: fixed; /* Define a posição como fixa em relação à viewport. */
-    top: 10px; /* Define a distância de 10 pixels do topo da viewport. */
-    right: 20px; /* Define a distância de 20 pixels da direita da viewport. */
-    z-index: 2; /* Define a ordem de empilhamento para garantir que os ícones estejam acima de outros elementos. */
+    position: fixed;
+    /* Define a posição como fixa em relação à viewport. */
+    top: 10px;
+    /* Define a distância de 10 pixels do topo da viewport. */
+    right: 20px;
+    /* Define a distância de 20 pixels da direita da viewport. */
+    z-index: 2;
+    /* Define a ordem de empilhamento para garantir que os ícones estejam acima de outros elementos. */
 }
 
 
 
 #links a {
-    text-decoration: none; /* Remove default underline */
-    position: relative; /* Position for the pseudo-element */
-    transition: color 0.3s ease; /* Smooth color transition */
+    text-decoration: none;
+    /* Remove default underline */
+    position: relative;
+    /* Position for the pseudo-element */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
 }
 
 #links a::after {
-    content: ""; /* Define um conteúdo vazio para o pseudo-elemento. */
-    position: absolute; /* Posiciona o pseudo-elemento de forma absoluta em relação ao link. */
-    bottom: -2px; /* Define a distância de 2 pixels do fundo do link. */
-    left: 0; /* Posiciona o pseudo-elemento no início do link. */
-    width: 0; /* Define a largura inicial da linha como 0. */
-    height: 1px; /* Define a altura da linha como 1 pixel. */
-    background-color: currentColor; /* Define a cor da linha como preto. */
-    transition: width 0.3s ease; /* Define uma transição suave de 0.3 segundos para a largura. */
+    content: "";
+    /* Define um conteúdo vazio para o pseudo-elemento. */
+    position: absolute;
+    /* Posiciona o pseudo-elemento de forma absoluta em relação ao link. */
+    bottom: -2px;
+    /* Define a distância de 2 pixels do fundo do link. */
+    left: 0;
+    /* Posiciona o pseudo-elemento no início do link. */
+    width: 0;
+    /* Define a largura inicial da linha como 0. */
+    height: 1px;
+    /* Define a altura da linha como 1 pixel. */
+    background-color: currentColor;
+    /* Define a cor da linha como preto. */
+    transition: width 0.3s ease;
+    /* Define uma transição suave de 0.3 segundos para a largura. */
 }
 
 .link {
-    text-decoration: none; /* Remove default underline */
-    position: relative; /* Position for the pseudo-element */
-    
-    transition: color 0.3s ease; /* Smooth color transition */
-  }
-  
-  /* Common styles for the pseudo-element */
-  .link::after {
-    content: ""; /* Define an empty content for the pseudo-element */
-    position: absolute; /* Position the pseudo-element absolutely relative to the link */
-    left: 0; /* Position the pseudo-element at the start of the link */
-    width: 0; /* Initial width of the line as 0 */
-    height: 1px; /* Height of the line as 1 pixel */
-    transition: width 0.3s ease; /* Smooth transition for the width over 0.3 seconds */
-  }
-  
-  /* Custom styles for each link */
-  #shop2::after {
-    bottom: 30px; /* Adjusted to bring the line closer to the text */
-    background-color: currentColor; /* Custom color for SHOP */
-  }
-  
-  #contact2::after {
-    bottom: 30px !important; /* Slightly different position */
-    background-color: currentColor; /* Custom color for CONTATO */
-  }
-  
-  #about2::after {
-    bottom: 30px; /* Further from the text */
-    background-color: currentColor; /* Custom color for SOBRE NÓS */
-  }
-  
-  .link:hover::after {
-    width: 100%; /* Full width on hover */
-  }
+    text-decoration: none;
+    /* Remove default underline */
+    position: relative;
+    /* Position for the pseudo-element */
 
-  @media (max-width: 600px) {
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+/* Common styles for the pseudo-element */
+.link::after {
+    content: "";
+    /* Define an empty content for the pseudo-element */
+    position: absolute;
+    /* Position the pseudo-element absolutely relative to the link */
+    left: 0;
+    /* Position the pseudo-element at the start of the link */
+    width: 0;
+    /* Initial width of the line as 0 */
+    height: 1px;
+    /* Height of the line as 1 pixel */
+    transition: width 0.3s ease;
+    /* Smooth transition for the width over 0.3 seconds */
+}
+
+/* Custom styles for each link */
+#shop2::after {
+    bottom: 30px;
+    /* Adjusted to bring the line closer to the text */
+    background-color: currentColor;
+    /* Custom color for SHOP */
+}
+
+#contact2::after {
+    bottom: 30px !important;
+    /* Slightly different position */
+    background-color: currentColor;
+    /* Custom color for CONTATO */
+}
+
+#about2::after {
+    bottom: 30px;
+    /* Further from the text */
+    background-color: currentColor;
+    /* Custom color for SOBRE NÓS */
+}
+
+.link:hover::after {
+    width: 100%;
+    /* Full width on hover */
+}
+
+@media (max-width: 600px) {
     #shop2::after {
-        bottom: 15px; /* Adjusted to bring the line closer to the text */
-        background-color: currentColor; /* Custom color for SHOP */
-      }
-      
-      #contact2::after {
-        bottom: 15px !important; /* Slightly different position */
-        background-color: currentColor; /* Custom color for CONTATO */
-      }
-      
-      #about2::after {
-        bottom: 15px; /* Further from the text */
-        background-color: currentColor; /* Custom color for SOBRE NÓS */
-      }
-}   
+        bottom: 15px;
+        /* Adjusted to bring the line closer to the text */
+        background-color: currentColor;
+        /* Custom color for SHOP */
+    }
+
+    #contact2::after {
+        bottom: 15px !important;
+        /* Slightly different position */
+        background-color: currentColor;
+        /* Custom color for CONTATO */
+    }
+
+    #about2::after {
+        bottom: 15px;
+        /* Further from the text */
+        background-color: currentColor;
+        /* Custom color for SOBRE NÓS */
+    }
+}
+
 /* Media Queries para Responsividade */
 @media (max-width: 600px) {
     #nav {
-        padding: 1px; /* Ajusta o espaçamento interno para 1 pixel. */
+        padding: 1px;
+        /* Ajusta o espaçamento interno para 1 pixel. */
     }
+
     #nav #nav-part1 {
-        height: 40px; /* Ajusta a altura do primeiro segmento do navbar para 47 pixels. */
+        height: 40px;
+        /* Ajusta a altura do primeiro segmento do navbar para 47 pixels. */
     }
+
     #nav #nav-part1 svg {
-        width: 80px; /* Ajusta a largura do SVG para 80 pixels. */
-        height: 67px; /* Ajusta a altura do SVG para 67 pixels. */
+        width: 80px;
+        /* Ajusta a largura do SVG para 80 pixels. */
+        height: 67px;
+        /* Ajusta a altura do SVG para 67 pixels. */
     }
+
     #nav #nav-part1 #logo2 {
-        margin-left: -20px; /* Ajusta a margem esquerda para -20 pixels. */
-        height: 40px; /* Ajusta a altura para 40 pixels. */
-        top: 40px; /* Ajusta a distância do topo para 40 pixels. */
+        margin-left: -20px;
+        /* Ajusta a margem esquerda para -20 pixels. */
+        height: 40px;
+        /* Ajusta a altura para 40 pixels. */
+        top: 40px;
+        /* Ajusta a distância do topo para 40 pixels. */
     }
+
     #nav #nav-part2 {
-        justify-content: center; /* Centraliza os itens no eixo principal (horizontal). */
+        justify-content: center;
+        /* Centraliza os itens no eixo principal (horizontal). */
     }
+
     #nav #nav-part2 #links {
-        display: none; /* Esconde os links. */
+        display: none;
+        /* Esconde os links. */
     }
 }
 
@@ -239,171 +346,256 @@ body {
 
 .cart-overlay {
     position: fixed;
-    top: -100%; /* Inicialmente escondido */
+    top: -100%;
+    /* Inicialmente escondido */
     left: 0;
     width: 100%;
-    height: 100%; /* Cobre a tela toda */
-    background-color: #000000; /* Fundo preto */
-    transition: top 0.5s ease; /* Transição suave para mostrar/esconder */
+    height: 100%;
+    /* Cobre a tela toda */
+    background-color: #000000;
+    /* Fundo preto */
+    transition: top 0.5s ease;
+    /* Transição suave para mostrar/esconder */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 4; /* Acima dos outros conteúdos */
+    z-index: 4;
+    /* Acima dos outros conteúdos */
 }
 
 
 
 .cart-overlay-active {
-    background-color: black; /* Define a cor de fundo como preto. */
-    position: fixed; /* Define a posição como fixa em relação à viewport. */
-    top: 0; /* Define a distância do topo como 0. */
-    left: 0; /* Define a distância da esquerda como 0. */
-    width: 100%; /* Define a largura como 100% da viewport. */
-    height: 86%; /* Define a altura como 100% da viewport. */
-    z-index: 10; /* Define a ordem de empilhamento para garantir que o overlay esteja acima de outros elementos. */
-    display: flex; /* Usa flexbox para layout. */
-    flex-direction: column; /* Define a direção dos itens como coluna (vertical). */
-    align-items: center; /* Alinha os itens ao centro do eixo transversal (horizontal). */
-    justify-content: center; /* Justifica o conteúdo ao centro do eixo principal (vertical). */
-    text-align: center; /* Centraliza o texto. */
-    color: white;/* Define a cor do texto como branco. */
-    font-family: 'Gilroy-Medium', sans-serif; /* Define a fonte personalizada 'Gilroy-Medium'. */
+    background-color: black;
+    /* Define a cor de fundo como preto. */
+    position: fixed;
+    /* Define a posição como fixa em relação à viewport. */
+    top: 0;
+    /* Define a distância do topo como 0. */
+    left: 0;
+    /* Define a distância da esquerda como 0. */
+    width: 100%;
+    /* Define a largura como 100% da viewport. */
+    height: 86%;
+    /* Define a altura como 100% da viewport. */
+    z-index: 10;
+    /* Define a ordem de empilhamento para garantir que o overlay esteja acima de outros elementos. */
+    display: flex;
+    /* Usa flexbox para layout. */
+    flex-direction: column;
+    /* Define a direção dos itens como coluna (vertical). */
+    align-items: center;
+    /* Alinha os itens ao centro do eixo transversal (horizontal). */
+    justify-content: center;
+    /* Justifica o conteúdo ao centro do eixo principal (vertical). */
+    text-align: center;
+    /* Centraliza o texto. */
+    color: white;
+    /* Define a cor do texto como branco. */
+    font-family: 'Gilroy-Medium', sans-serif;
+    /* Define a fonte personalizada 'Gilroy-Medium'. */
 }
 
 .cart-overlay-active h2 {
-    font-size: 24px; /* Define o tamanho da fonte como 24 pixels. */
-    margin-bottom: 20px; /* Define uma margem inferior de 20 pixels. */
+    font-size: 24px;
+    /* Define o tamanho da fonte como 24 pixels. */
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20 pixels. */
 }
+
 #nav-part2 {
-    z-index: 13; /* Higher than the overlay's z-index */
+    z-index: 13;
+    /* Higher than the overlay's z-index */
 
 }
 
 .cart-overlay-active button {
-    background-color: transparent; /* Define a cor de fundo como transparente. */
-    border: 2px solid white; /* Define uma borda branca de 2 pixels. */
-    color: white; /* Define a cor do texto como branco. */
-    padding: 10px 20px; /* Define um espaçamento interno de 10 pixels nas laterais e 20 pixels nas extremidades. */
-    text-transform: uppercase; /* Transforma o texto para letras maiúsculas. */
-    font-size: 16px; /* Define o tamanho da fonte como 16 pixels. */
-    cursor: pointer; /* Define o cursor como ponteiro ao passar o mouse sobre o botão. */
-    transition: background-color 0.3s ease; /* Define uma transição suave de 0.3 segundos para a cor de fundo. */
+    background-color: transparent;
+    /* Define a cor de fundo como transparente. */
+    border: 2px solid white;
+    /* Define uma borda branca de 2 pixels. */
+    color: white;
+    /* Define a cor do texto como branco. */
+    padding: 10px 20px;
+    /* Define um espaçamento interno de 10 pixels nas laterais e 20 pixels nas extremidades. */
+    text-transform: uppercase;
+    /* Transforma o texto para letras maiúsculas. */
+    font-size: 16px;
+    /* Define o tamanho da fonte como 16 pixels. */
+    cursor: pointer;
+    /* Define o cursor como ponteiro ao passar o mouse sobre o botão. */
+    transition: background-color 0.3s ease;
+    /* Define uma transição suave de 0.3 segundos para a cor de fundo. */
 }
 
 
 .cart-overlay-active #links #about:hover::after {
-    width: 65%; /* Define a largura da linha de destaque como 65% ao passar o mouse. */
+    width: 65%;
+    /* Define a largura da linha de destaque como 65% ao passar o mouse. */
 }
 
 .cart-overlay-active #links #shop:hover::after {
-    width: 50%; /* Define a largura da linha de destaque como 50% ao passar o mouse. */
+    width: 50%;
+    /* Define a largura da linha de destaque como 50% ao passar o mouse. */
 }
 
 .cart-overlay-active #links #contact:hover::after {
-    width: 60%; /* Define a largura da linha de destaque como 60% ao passar o mouse. */
+    width: 60%;
+    /* Define a largura da linha de destaque como 60% ao passar o mouse. */
 }
 
 
 @media (min-width: 500px) and (max-width: 1090px) {
     .cart-overlay {
         position: fixed;
-        top: -100%; /* Inicialmente escondido */
+        top: -100%;
+        /* Inicialmente escondido */
         left: 0;
         width: 100%;
-        height: 100%; /* Cobre a tela toda */
-        background-color: #000000; /* Fundo preto */
-        transition: top 0.5s ease; /* Transição suave para mostrar/esconder */
+        height: 100%;
+        /* Cobre a tela toda */
+        background-color: #000000;
+        /* Fundo preto */
+        transition: top 0.5s ease;
+        /* Transição suave para mostrar/esconder */
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 4; /* Acima dos outros conteúdos */
+        z-index: 4;
+        /* Acima dos outros conteúdos */
     }
-    
-    
-    
-    .cart-overlay-active {
-        background-color: black; /* Define a cor de fundo como preto. */
-        position: fixed; /* Define a posição como fixa em relação à viewport. */
-        top: 0; /* Define a distância do topo como 0. */
-        left: 0; /* Define a distância da esquerda como 0. */
-        width: 100%; /* Define a largura como 100% da viewport. */
-        height: 86%; /* Define a altura como 100% da viewport. */
-        z-index: 10; /* Define a ordem de empilhamento para garantir que o overlay esteja acima de outros elementos. */
-        display: flex; /* Usa flexbox para layout. */
-        flex-direction: column; /* Define a direção dos itens como coluna (vertical). */
-        align-items: center; /* Alinha os itens ao centro do eixo transversal (horizontal). */
-        justify-content: center; /* Justifica o conteúdo ao centro do eixo principal (vertical). */
-        text-align: center; /* Centraliza o texto. */
-        color: white;/* Define a cor do texto como branco. */
 
-        font-family: 'Gilroy-Medium', sans-serif; /* Define a fonte personalizada 'Gilroy-Medium'. */
+
+
+    .cart-overlay-active {
+        background-color: black;
+        /* Define a cor de fundo como preto. */
+        position: fixed;
+        /* Define a posição como fixa em relação à viewport. */
+        top: 0;
+        /* Define a distância do topo como 0. */
+        left: 0;
+        /* Define a distância da esquerda como 0. */
+        width: 100%;
+        /* Define a largura como 100% da viewport. */
+        height: 86%;
+        /* Define a altura como 100% da viewport. */
+        z-index: 10;
+        /* Define a ordem de empilhamento para garantir que o overlay esteja acima de outros elementos. */
+        display: flex;
+        /* Usa flexbox para layout. */
+        flex-direction: column;
+        /* Define a direção dos itens como coluna (vertical). */
+        align-items: center;
+        /* Alinha os itens ao centro do eixo transversal (horizontal). */
+        justify-content: center;
+        /* Justifica o conteúdo ao centro do eixo principal (vertical). */
+        text-align: center;
+        /* Centraliza o texto. */
+        color: white;
+        /* Define a cor do texto como branco. */
+
+        font-family: 'Gilroy-Medium', sans-serif;
+        /* Define a fonte personalizada 'Gilroy-Medium'. */
     }
-    
+
     .cart-overlay-active h2 {
-        font-size: 24px; /* Define o tamanho da fonte como 24 pixels. */
-        margin-bottom: 20px; /* Define uma margem inferior de 20 pixels. */
+        font-size: 24px;
+        /* Define o tamanho da fonte como 24 pixels. */
+        margin-bottom: 20px;
+        /* Define uma margem inferior de 20 pixels. */
     }
+
     #nav-part2 {
-        z-index: 13; /* Higher than the overlay's z-index */
-    
+        z-index: 13;
+        /* Higher than the overlay's z-index */
+
     }
-    
+
     .cart-overlay-active button {
-        background-color: transparent; /* Define a cor de fundo como transparente. */
-        border: 2px solid white; /* Define uma borda branca de 2 pixels. */
-        color: white; /* Define a cor do texto como branco. */
-        padding: 10px 20px; /* Define um espaçamento interno de 10 pixels nas laterais e 20 pixels nas extremidades. */
-        text-transform: uppercase; /* Transforma o texto para letras maiúsculas. */
-        font-size: 16px; /* Define o tamanho da fonte como 16 pixels. */
-        cursor: pointer; /* Define o cursor como ponteiro ao passar o mouse sobre o botão. */
-        transition: background-color 0.3s ease; /* Define uma transição suave de 0.3 segundos para a cor de fundo. */
+        background-color: transparent;
+        /* Define a cor de fundo como transparente. */
+        border: 2px solid white;
+        /* Define uma borda branca de 2 pixels. */
+        color: white;
+        /* Define a cor do texto como branco. */
+        padding: 10px 20px;
+        /* Define um espaçamento interno de 10 pixels nas laterais e 20 pixels nas extremidades. */
+        text-transform: uppercase;
+        /* Transforma o texto para letras maiúsculas. */
+        font-size: 16px;
+        /* Define o tamanho da fonte como 16 pixels. */
+        cursor: pointer;
+        /* Define o cursor como ponteiro ao passar o mouse sobre o botão. */
+        transition: background-color 0.3s ease;
+        /* Define uma transição suave de 0.3 segundos para a cor de fundo. */
     }
-    
+
 
     .cart-overlay-active #Cart-Text1 {
-        font-size: 65px; /* Define o tamanho da fonte como 14 pixels. */
-            
-        }    
+        font-size: 65px;
+        /* Define o tamanho da fonte como 14 pixels. */
+
+    }
 
     .cart-overlay-active #Cart-Text2 {
-        font-size: 94px; /* Define o tamanho da fonte como 14 pixels. */
-        
-        }
+        font-size: 94px;
+        /* Define o tamanho da fonte como 14 pixels. */
 
-    
+    }
+
+
 
 }
 
 .menu-overlay {
     position: fixed;
-    top: -100%; /* Inicialmente escondido */
+    top: -100%;
+    /* Inicialmente escondido */
     left: 0;
     width: 100%;
-    height: 100%; /* Cobre a tela toda */
-    background-color: #000000; /* Fundo preto */
-    transition: top 0.5s ease; /* Transição suave para mostrar/esconder */
+    height: 100%;
+    /* Cobre a tela toda */
+    background-color: #000000;
+    /* Fundo preto */
+    transition: top 0.5s ease;
+    /* Transição suave para mostrar/esconder */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 5; /* Acima dos outros conteúdos */
+    z-index: 5;
+    /* Acima dos outros conteúdos */
 }
 
 
 
 .menu-overlay-active {
-    background-color: black; /* Define a cor de fundo como preto. */
-    position: fixed; /* Define a posição como fixa em relação à viewport. */
-    top: 0; /* Define a distância do topo como 0. */
-    left: 0; /* Define a distância da esquerda como 0. */
-    width: 100%; /* Define a largura como 100% da viewport. */
-    height: 100%; /* Define a altura como 100% da viewport. */
-    z-index: 10; /* Define a ordem de empilhamento para garantir que o overlay esteja acima de outros elementos. */
-    display: flex; /* Usa flexbox para layout. */
-    flex-direction: row; /* Define a direção dos itens como linha (horizontal). */
-    align-items: flex-end; /* Alinha os itens ao fundo do eixo transversal (vertical). */
-    justify-content: space-between; /* Justifica o conteúdo nos extremos da tela. */
-    color: white; /* Define a cor do texto como branco. */
-    font-family: 'Gilroy-Medium', sans-serif; /* Define a fonte personalizada 'Gilroy-Medium'. */
+    background-color: black;
+    /* Define a cor de fundo como preto. */
+    position: fixed;
+    /* Define a posição como fixa em relação à viewport. */
+    top: 0;
+    /* Define a distância do topo como 0. */
+    left: 0;
+    /* Define a distância da esquerda como 0. */
+    width: 100%;
+    /* Define a largura como 100% da viewport. */
+    height: 100%;
+    /* Define a altura como 100% da viewport. */
+    z-index: 10;
+    /* Define a ordem de empilhamento para garantir que o overlay esteja acima de outros elementos. */
+    display: flex;
+    /* Usa flexbox para layout. */
+    flex-direction: row;
+    /* Define a direção dos itens como linha (horizontal). */
+    align-items: flex-end;
+    /* Alinha os itens ao fundo do eixo transversal (vertical). */
+    justify-content: space-between;
+    /* Justifica o conteúdo nos extremos da tela. */
+    color: white;
+    /* Define a cor do texto como branco. */
+    font-family: 'Gilroy-Medium', sans-serif;
+    /* Define a fonte personalizada 'Gilroy-Medium'. */
     padding: 20px;
 }
 
@@ -413,15 +605,19 @@ body {
     left: 20px;
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 40px); /* Ajusta a largura para dar espaço para os links à direita */
+    width: calc(100% - 40px);
+    /* Ajusta a largura para dar espaço para os links à direita */
 }
 
 .menu-left {
     display: flex;
     flex-direction: row;
-    align-items: flex-end; /* Alinha colunas próximo ao rodapé */
-    gap: 10px; /* Pequeno espaçamento entre colunas */
-    width: 50%; /* Ajuste se necessário */
+    align-items: flex-end;
+    /* Alinha colunas próximo ao rodapé */
+    gap: 10px;
+    /* Pequeno espaçamento entre colunas */
+    width: 50%;
+    /* Ajuste se necessário */
     transform: translateY(-17px) !important;
 }
 
@@ -442,7 +638,8 @@ body {
 
 
 .menu-left .menu-column {
-    flex: 1; /* As colunas da esquerda ocupam o mesmo espaço */
+    flex: 1;
+    /* As colunas da esquerda ocupam o mesmo espaço */
 }
 
 .menu-column {
@@ -452,45 +649,60 @@ body {
 }
 
 .menu-left .menu-text {
-    font-size: 16px; /* Tamanho do texto da esquerda */
+    font-size: 16px;
+    /* Tamanho do texto da esquerda */
 }
 
 .menu-right {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Alinha os itens próximo ao rodapé à direita */
-    justify-content: flex-end; /* Justifica o conteúdo ao rodapé */
-    gap: 1px; /* Super pequeno espaçamento */
-    width: 50%; /* Ajuste se necessário */
-    
+    align-items: flex-end;
+    /* Alinha os itens próximo ao rodapé à direita */
+    justify-content: flex-end;
+    /* Justifica o conteúdo ao rodapé */
+    gap: 1px;
+    /* Super pequeno espaçamento */
+    width: 50%;
+    /* Ajuste se necessário */
+
 }
 
 .menu-right .link {
-    font-size: 110px; /* Tamanho do texto da direita */
+    font-size: 110px;
+    /* Tamanho do texto da direita */
     font-weight: bolder;
-    margin-left: 0; /* Remove o margin-left */
+    margin-left: 0;
+    /* Remove o margin-left */
     margin-bottom: -50px;
     transform: translateY(-30px) !important;
-     
+
 }
 
 
-.menu-text1:hover, .menu-text2:hover, .menu-text3:hover {
-    color: #727272 !important; /* Replace #lighterColor with the actual color code you want */
-    transition: color 0.3s ease !important; /* Smooth transition for the color change */
-  }
+.menu-text1:hover,
+.menu-text2:hover,
+.menu-text3:hover {
+    color: #727272 !important;
+    /* Replace #lighterColor with the actual color code you want */
+    transition: color 0.3s ease !important;
+    /* Smooth transition for the color change */
+}
 
-  .menu-left .menu-text3 {
-    font-size: 14px; /* Adjust font size for smaller screens */
+.menu-left .menu-text3 {
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
     transform: translateY(-82px) !important;
 }
 
 .menu-left .menu-text1 {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
     transform: translateY(-18px) !important;
 }
+
 .menu-left .menu-text2 {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
     transform: translateY(-39px) !important;
 }
 
@@ -498,35 +710,49 @@ body {
 
 @media (min-width: 500px) and (max-width: 1090px) {
     .menu-content {
-        flex-direction: column-reverse; /* Stack right menu on top of left menu */
-        align-items: center; /* Center align the items for better appearance */
-        justify-content: center; /* Center the content vertically */
-        padding: 10px; /* Add some padding for spacing */
+        flex-direction: column-reverse;
+        /* Stack right menu on top of left menu */
+        align-items: center;
+        /* Center align the items for better appearance */
+        justify-content: center;
+        /* Center the content vertically */
+        padding: 10px;
+        /* Add some padding for spacing */
     }
 
-    .menu-left, .menu-right {
-        width: 100%; /* Make both menus take full width */
-        justify-content: center; /* Center the content of both menus */
-        gap: 1px; /* Increase gap for better spacing */
+    .menu-left,
+    .menu-right {
+        width: 100%;
+        /* Make both menus take full width */
+        justify-content: center;
+        /* Center the content of both menus */
+        gap: 1px;
+        /* Increase gap for better spacing */
     }
 
     .menu-right .link {
-        font-size: 60px; /* Adjust font size for smaller screens */
-        margin-bottom: -20px; /* Adjust spacing */
+        font-size: 60px;
+        /* Adjust font size for smaller screens */
+        margin-bottom: -20px;
+        /* Adjust spacing */
         transform: translateY(-130px) !important;
     }
 
     .menu-left .menu-text3 {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px;
+        /* Adjust font size for smaller screens */
         transform: translateY(-43px) !important;
     }
 
     .menu-left .menu-text1 {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px;
+        /* Adjust font size for smaller screens */
         transform: translateY(20px) !important;
     }
+
     .menu-left .menu-text2 {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px;
+        /* Adjust font size for smaller screens */
         transform: translateY(-1px) !important;
     }
 
@@ -534,12 +760,12 @@ body {
         margin-bottom: 11px;
         color: #434141;
     }
-    
+
     .menu-left .menu-column #title2 {
         margin-bottom: 33px;
         color: #434141;
     }
-    
+
     .menu-left .menu-column #title3 {
         margin-bottom: 34px;
         color: #434141;
@@ -549,73 +775,100 @@ body {
 
 /* Estilos do Frame */
 #frame {
-    transition: transform 1.0s ease-out; /* Define uma transição suave de 1.0 segundos para a transformação. */
-    transform-origin: bottom; /* Define a origem da transformação como a parte inferior. */
+    transition: transform 1.0s ease-out;
+    /* Define uma transição suave de 1.0 segundos para a transformação. */
+    transform-origin: bottom;
+    /* Define a origem da transformação como a parte inferior. */
 }
 
 #frame img {
-    object-fit: cover; /* Ajusta a imagem para cobrir toda a área disponível, cortando excessos. */
-    width: 100%; /* Define a largura como 100% do contêiner pai. */
-    height: 100%; /* Define a altura como 100% do contêiner pai. */
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir toda a área disponível, cortando excessos. */
+    width: 100%;
+    /* Define a largura como 100% do contêiner pai. */
+    height: 100%;
+    /* Define a altura como 100% do contêiner pai. */
 }
 
 #frame.expanded {
-    transform: scale(1.1); /* Aumenta a escala para 1.1 (110%) ao expandir. */
+    transform: scale(1.1);
+    /* Aumenta a escala para 1.1 (110%) ao expandir. */
 }
 
 #frame .transition-opacity {
-    transition: opacity 2s ease-out; /* Define uma transição suave de 2 segundos para a opacidade. */
+    transition: opacity 2s ease-out;
+    /* Define uma transição suave de 2 segundos para a opacidade. */
 }
 
 #frame .transition-opacity:not(.visible) {
-    opacity: 0; /* Define a opacidade como 0 quando o elemento não tem a classe 'visible'. */
+    opacity: 0;
+    /* Define a opacidade como 0 quando o elemento não tem a classe 'visible'. */
 }
 
 @media (max-width: 640px) {
     #frame.expanded {
-        transform: scale(1); /* Define a escala normal (100%) em telas menores. */
+        transform: scale(1);
+        /* Define a escala normal (100%) em telas menores. */
     }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
     #frame {
-        height: 70%; /* Define a altura como 70% do contêiner pai em telas médias. */
+        height: 70%;
+        /* Define a altura como 70% do contêiner pai em telas médias. */
     }
 }
 
 /* Definição de Fonte */
 @font-face {
     font-family: 'Gilroy-Medium';
-    src: url('../Gilroy-Medium.ttf') format('truetype'); /* Define a fonte personalizada 'Gilroy-Medium' e o caminho para o arquivo da fonte. */
+    src: url('../Gilroy-Medium.ttf') format('truetype');
+    /* Define a fonte personalizada 'Gilroy-Medium' e o caminho para o arquivo da fonte. */
 }
 
 /* Estilização da Scrollbar */
 /* Adjust scrollbar styles */
 ::-webkit-scrollbar {
-    width: 11px; /* Width of the scrollbar */
-    background: #f7f7f7; /* Background color of the scrollbar */
+    width: 11px;
+    /* Width of the scrollbar */
+    background: #f7f7f7;
+    /* Background color of the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2); /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners for the thumb */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners for the thumb */
 }
 
 ::-webkit-scrollbar-track {
-    background: #f7f7f7; /* Color of the track (behind the thumb) */
-    border-radius: 10px; /* Rounded corners for the track */
+    background: #f7f7f7;
+    /* Color of the track (behind the thumb) */
+    border-radius: 10px;
+    /* Rounded corners for the track */
 }
 
 /* Animação de Fade-In utilizada no <links> do HEADER */
 .fade-in {
-    animation: fadeIn ease 1s; /* Aplica a animação de fade-in, que dura 1 segundo e tem uma transição suave. */
-    animation-fill-mode: forwards; /* Mantém o estado final da animação após sua conclusão. */
-    opacity: 0; /* Define a opacidade como 0, tornando o elemento invisível inicialmente. */
+    animation: fadeIn ease 1s;
+    /* Aplica a animação de fade-in, que dura 1 segundo e tem uma transição suave. */
+    animation-fill-mode: forwards;
+    /* Mantém o estado final da animação após sua conclusão. */
+    opacity: 0;
+    /* Define a opacidade como 0, tornando o elemento invisível inicialmente. */
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Apply the animation to text elements within the menu on the right */
@@ -628,14 +881,15 @@ body {
 
 @keyframes splitTextRise {
     0% {
-      opacity: 0;
-      transform: translateY(-100%);
+        opacity: 0;
+        transform: translateY(-100%);
     }
+
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
 
 
 #cursor {
@@ -655,87 +909,103 @@ body {
     width: 18px;
     height: 1px;
     margin: 5px 0;
-    margin-left: -45px;
+    z-index: 1;
+    position: relative;
+    /* margin-left: -45px; */
     margin-top: 3px;
-    
-  }
-  
-  .menu-btn.active .line-top {
-    transform: translateY(3px) rotate(45deg);
-  }
-  
-  .menu-btn.active .line-bottom {
-    transform: translateY( -2px) rotate(-45deg);
-  }
 
-  .menu-btn {
-    margin-top: 16px;
-    margin-right: 60px; /* Adjust this value as needed to move the button down */
-    
+}
+
+.menu-btn.active .line-top {
+    transform: translateY(3px) rotate(45deg);
+}
+
+.menu-btn.active .line-bottom {
+    transform: translateY(-2px) rotate(-45deg);
+}
+
+.menu-btn {
+    /* margin-top: 16px; */
+    margin-right: 33px;
+    /* Adjust this value as needed to move the button down */
+
 }
 
 .menu-btn:not(.active):hover .line-top {
-    transform: translateY(1px); /* Adjust this value as needed */
+    transform: translateY(1px);
+    /* Adjust this value as needed */
 }
 
 .menu-btn:not(.active):hover .line-bottom {
-    transform: translateY(-1px); /* Adjust this value as needed */
+    transform: translateY(-1px);
+    /* Adjust this value as needed */
 }
 
 .cart-icon-svg {
-    width: 17px; /* Increase icon size */
-    height: 24px; /* Increase icon size */
+    width: 17px;
+    /* Increase icon size */
+    height: 24px;
+    /* Increase icon size */
     transition: transform 0.3s ease-in-out;
-  }
-  
-  /* Example of moving the icon */
-  .cart-icon {
-    position: relative;
-    margin-top: -25px;
-    margin-right: 25px;
 }
-  
-  .cart-icon-svg {
+
+/* Example of moving the icon */
+.cart-icon {
+    position: relative;
+    margin-top: -7px;
+}
+
+.cart-icon-svg {
     position: absolute;
     stroke-width: 1.5;
-    top: 5px; /* Move icon down */
-    right: 5px; /* Move icon to the right */
-  }
+    top: 5px;
+    /* Move icon down */
+    right: 5px;
+    /* Move icon to the right */
+}
 
-  .cart-icon-svg:hover {
+.cart-icon-svg:hover {
     transform: rotate(-10deg);
-  }
+}
 
 
 .cart-button:hover {
-    background-color: #FFFFFF !important; /* White background */
-    color: #000000 !important; /* Black text */
-    
-  }
+    background-color: #FFFFFF !important;
+    /* White background */
+    color: #000000 !important;
+    /* Black text */
+
+}
 
 
-  .cart-button {
+.cart-button {
     border-radius: 9999px;
-    height: 5rem; /* 80px */
-    width: 20rem; /* 320px */
-    margin-bottom: 5rem; /* 80px */
+    height: 5rem;
+    /* 80px */
+    width: 20rem;
+    /* 320px */
+    margin-bottom: 5rem;
+    /* 80px */
     cursor: pointer;
-    position: relative; /* Adjust if necessary */
-    z-index: 999; /* Bring to the forefront */
-  }
-  
+    position: relative;
+    /* Adjust if necessary */
+    z-index: 999;
+    /* Bring to the forefront */
+}
 
- 
 
-  
-  #links a.visible, .link.visible {
+
+
+
+#links a.visible,
+.link.visible {
     opacity: 1;
-  }
+}
 
 
-  .cart-icon {
+.cart-icon {
     transition: transform 0.3s ease-in-out;
-  }
+}
 
 @media (min-width: 500px) and (max-width: 1090px) {
     .menu-btn .line {
@@ -746,48 +1016,55 @@ body {
         margin: 5px 0;
         margin-left: -45px;
         margin-top: 2px;
-        
-      }
-      
-      .menu-btn.active .line-top {
+
+    }
+
+    .menu-btn.active .line-top {
         transform: translateY(5px) rotate(45deg);
-      }
-      
-      .menu-btn.active .line-bottom {
-        transform: translateY( -1px) rotate(-45deg);
-      }
-    
-      .menu-btn {
+    }
+
+    .menu-btn.active .line-bottom {
+        transform: translateY(-1px) rotate(-45deg);
+    }
+
+    .menu-btn {
         margin-top: 14px;
-        margin-right: 60px; /* Adjust this value as needed to move the button down */
-        
+        margin-right: 60px;
+        /* Adjust this value as needed to move the button down */
+
     }
-    
+
     .menu-btn:not(.active):hover .line-top {
-        transform: translateY(1px); /* Adjust this value as needed */
+        transform: translateY(1px);
+        /* Adjust this value as needed */
     }
-    
+
     .menu-btn:not(.active):hover .line-bottom {
-        transform: translateY(-1px); /* Adjust this value as needed */
+        transform: translateY(-1px);
+        /* Adjust this value as needed */
     }
 
     .cart-icon-svg {
-        width: 17px; /* Increase icon size */
-        height: 24px; /* Increase icon size */
+        width: 17px;
+        /* Increase icon size */
+        height: 24px;
+        /* Increase icon size */
         transition: transform 0.3s ease-in-out;
     }
-    
+
     /* Example of moving the icon */
     .cart-icon {
         position: relative;
         margin-top: -24px;
         margin-right: 20px;
     }
-    
+
     .cart-icon-svg {
         position: absolute;
-        top: 5px; /* Move icon down */
-        right: 5px; /* Move icon to the right */
+        top: 5px;
+        /* Move icon down */
+        right: 5px;
+        /* Move icon to the right */
     }
 
     .cart-icon-svg:hover {
@@ -795,12 +1072,12 @@ body {
     }
 
 
-    
+
 }
 
 
 
-  
+
 #ProductGrid {
     margin-top: -180px !important;
 }
@@ -852,7 +1129,7 @@ body {
     color: #FFFFFF;
     border: none;
     padding: 10px 20px;
-    font-size: 11.5px ;
+    font-size: 11.5px;
     cursor: pointer;
 }
 
@@ -871,6 +1148,11 @@ body {
     margin-top: 80px;
 }
 
+.icon-background {
+    @apply px-5 py-[10px] min-w-28 rounded-[50px] h-10 fade-in transition-opacity flex flex-wrap justify-around;
+    ;
+}
+
 
 @media (min-width: 500px) and (max-width: 1000px) {
     #item-name {
@@ -884,7 +1166,7 @@ body {
         top: 0;
         left: 0;
     }
-    
+
     #item-photo {
         margin-left: 5px;
     }
@@ -894,7 +1176,7 @@ body {
         margin-top: 1150px;
         text-align: center;
     }
-    
+
     .button-container {
         display: flex;
         align-items: center;
@@ -911,7 +1193,7 @@ body {
         top: 0;
         right: 0;
     }
-    
+
     .cart-button,
     .add-to-cart {
         background-color: #000;
@@ -921,23 +1203,21 @@ body {
         font-size: 10px;
         cursor: pointer;
     }
-    
+
     .quantity-button:hover,
     .add-to-cart-button:hover {
         background-color: #333;
     }
-    
+
     .quantity,
     .price {
         font-size: 14px;
         margin: 0 20px !important;
     }
-    
+
     #banner1 {
         margin-top: 350px;
     }
 
-   
+
 }
-
-
